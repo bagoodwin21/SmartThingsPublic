@@ -130,8 +130,13 @@ check "unmapped scripts reported" "no script configured" "$OUT"
 OUT="$(python3 "$DW" run "$JOB" --execute 2>&1 || true)"
 check "execute refused while gate closed" "REFUSING: execution_enabled is false" "$OUT"
 
-snapshot_drive() {
-    find "$VOLS/CLIENT_TEST_1" -type f -printf '%p %s %T@\n' | sort
+snapshot_drive() { # portable (BSD find has no -printf)
+    python3 -c '
+import os, sys
+for root, _, files in os.walk(sys.argv[1]):
+    for f in sorted(files):
+        p = os.path.join(root, f); st = os.lstat(p)
+        print(p, st.st_size, st.st_mtime)' "$VOLS/CLIENT_TEST_1" | sort
 }
 BEFORE="$(snapshot_drive)"
 
