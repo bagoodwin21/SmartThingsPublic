@@ -1,0 +1,35 @@
+{
+  "volumes_dir": "/Volumes",
+  "state_dir": "~/Library/Application Support/drive-watcher",
+  "log_dir": "~/Library/Logs/drive-watcher",
+  "debounce_seconds": 20,
+
+  "ignore_volumes": [
+    "Macintosh HD", "Macintosh HD *", "Recovery", "Preboot", "VM",
+    "Update", "Data", "com.apple.TimeMachine.*",
+    "FILL-IN-shuttle-drive-name-1", "FILL-IN-shuttle-drive-name-2"
+  ],
+  "ignore_timemachine": true,
+  "require_mountpoint": true,
+  "auto_open_chooser": false,
+
+  "execution_enabled": false,
+
+  "profile_max_seconds": 0,
+
+  "nas": {
+    "staging_root": null,
+    "free_check_cmd": null,
+    "min_free_gb": 200
+  },
+
+  "scripts": {
+    "rsync_to_staging": null,
+    "sort_media_by_date": null,
+    "blake3_dedup": null,
+    "nsfw_scan": null,
+    "immich_index": null,
+    "route_documents": null,
+    "password_recovery_flag": null
+  }
+}

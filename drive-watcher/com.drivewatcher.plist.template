@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.drivewatcher</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>@PYTHON@</string>
+        <string>@SCRIPT@</string>
+        <string>watch</string>
+    </array>
+
+    <!-- Fires whenever /Volumes changes (mount or unmount); the script
+         snapshot-diffs to find genuinely new volumes and ignores unmounts. -->
+    <key>WatchPaths</key>
+    <array>
+        <string>/Volumes</string>
+    </array>
+
+    <!-- Also reconcile at login in case a drive was attached while away. -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- launchd-level debounce; the script debounces per-volume too. -->
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+
+    <key>StandardOutPath</key>
+    <string>@LOGDIR@/launchagent.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>@LOGDIR@/launchagent.err.log</string>
+</dict>
+</plist>
