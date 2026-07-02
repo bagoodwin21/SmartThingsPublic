@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* CYRA Wellness design system */
+  --color-primary: #1b5e6e;
+  --color-primary-light: #2a7d8f;
+  --color-accent: #c9973a;
+  --color-accent-light: #e8b95a;
+  --color-warm: #e8c4c4;
+  --color-background: #faf7f4;
+  --color-surface: #ffffff;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #4a4a6a;
+  --color-text-muted: #8a8aa0;
+  --color-success: #2d7d4f;
+  --color-border: #e8e4e0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background font-body text-body text-foreground antialiased;
+}
+
+@layer components {
+  /* Typography scale helpers (mobile-first, desktop at md:) */
+  .heading-hero {
+    @apply font-heading text-hero-mobile md:text-hero text-foreground;
+  }
+
+  .heading-section {
+    @apply font-heading text-section-mobile md:text-section text-foreground;
+  }
+
+  .text-subheadline {
+    @apply font-body text-subhead-mobile md:text-subhead text-foreground-secondary;
+  }
+
+  .text-body-copy {
+    @apply font-body text-body-mobile md:text-body text-foreground-secondary;
+  }
+}
