@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MapPin, Mail } from "lucide-react";
-import { legalLinks, navLinks, siteConfig } from "@/lib/site";
+import { legalLinks, navLinks, secondaryLinks, siteConfig } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -22,7 +22,7 @@ export function Footer() {
             Quick Links
           </p>
           <ul className="mt-4 space-y-2.5">
-            {navLinks.map((link) => (
+            {[...navLinks, ...secondaryLinks].map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}

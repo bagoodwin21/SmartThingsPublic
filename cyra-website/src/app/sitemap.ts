@@ -1,12 +1,13 @@
 import type { MetadataRoute } from "next";
 import { conditions } from "@/lib/conditions";
-import { legalLinks, navLinks, siteConfig } from "@/lib/site";
+import { legalLinks, navLinks, secondaryLinks, siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "/",
     "/book",
     ...navLinks.map((l) => l.href),
+    ...secondaryLinks.map((l) => l.href),
     ...Object.keys(conditions).map((slug) => `/what-we-treat/${slug}`),
     ...legalLinks.map((l) => l.href),
   ];

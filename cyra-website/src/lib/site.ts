@@ -24,6 +24,12 @@ export const navLinks: NavLink[] = [
   { label: "FAQ", href: "/faq" },
 ];
 
+/** Pages linked from the footer (and sitemap) but not the main nav. */
+export const secondaryLinks: NavLink[] = [
+  { label: "About", href: "/about" },
+  { label: "Patient Resources", href: "/patient-resources" },
+];
+
 export const legalLinks: NavLink[] = [
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms of Service", href: "/terms-of-service" },
