@@ -26,6 +26,37 @@ body {
   @apply bg-background font-body text-body text-foreground antialiased;
 }
 
+/* Subtle animated teal-to-ivory gradient for the home hero */
+.hero-gradient {
+  background: linear-gradient(
+    120deg,
+    #e3eef1 0%,
+    #faf7f4 38%,
+    #f6efe3 70%,
+    #e3eef1 100%
+  );
+  background-size: 300% 300%;
+  animation: hero-gradient-shift 16s ease-in-out infinite;
+}
+
+@keyframes hero-gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-gradient {
+    animation: none;
+  }
+}
+
 @layer components {
   /* Typography scale helpers (mobile-first, desktop at md:) */
   .heading-hero {
