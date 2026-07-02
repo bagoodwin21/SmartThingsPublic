@@ -127,7 +127,7 @@ const ROWS: Row[] = [
     ],
   },
   {
-    criterion: "California & Arizona Telehealth",
+    criterion: "California Telehealth",
     cells: [
       { verdict: "yes" },
       { verdict: "yes" },

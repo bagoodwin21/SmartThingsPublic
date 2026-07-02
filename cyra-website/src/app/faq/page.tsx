@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "Where are you licensed?",
     answer:
-      "Dr. Mondona Goodwin, DO is licensed in California and Arizona. All visits take place over secure video telemedicine.",
+      "Dr. Mondona Goodwin, DO is licensed in California. All visits take place over secure video telemedicine.",
   },
   {
     question: "Do you prescribe testosterone for women?",

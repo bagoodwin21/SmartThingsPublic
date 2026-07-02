@@ -115,7 +115,7 @@ export default function HomePage() {
             />
             <FAQItem
               question="Where are you licensed to practice?"
-              answer="Dr. Goodwin is licensed in California and Arizona, and all visits are conducted by secure video telemedicine."
+              answer="Dr. Goodwin is licensed in California, and all visits are conducted by secure video telemedicine."
             />
             <FAQItem
               question="Do you prescribe testosterone for women?"
