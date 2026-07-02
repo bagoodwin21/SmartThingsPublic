@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { navLinks } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -73,9 +73,12 @@ export function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button variant="accent" size="sm">
+          <Link
+            href="/book"
+            className={buttonVariants({ variant: "accent", size: "sm" })}
+          >
             Book Free Consult
-          </Button>
+          </Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -146,7 +149,12 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05 * navLinks.length, duration: 0.3 }}
               >
-                <Button variant="accent">Book Free Consult</Button>
+                <Link
+                  href="/book"
+                  className={buttonVariants({ variant: "accent" })}
+                >
+                  Book Free Consult
+                </Link>
               </motion.div>
             </nav>
           </motion.div>

@@ -54,7 +54,7 @@ const dimensions = [
   {
     Icon: CreditCard,
     title: "Financing options",
-    body: "If a care plan or subscription is a financial stretch, does the platform offer financing? Cherry and CareCredit integrations matter for accessibility.",
+    body: "If a care plan or subscription is a financial stretch, does the platform offer financing? A Cherry integration matters for accessibility.",
   },
   {
     Icon: UserCheck,

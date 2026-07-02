@@ -77,7 +77,7 @@ const differencePillars = [
   {
     Icon: CalendarCheck,
     title: "A Care Plan, Not a Subscription",
-    body: "No month-to-month uncertainty. Your 12-month care plan is structured around your goals with flexible financing through Cherry and CareCredit — so you can commit to your health without committing to a lump sum.",
+    body: "No month-to-month uncertainty. Your 12-month care plan is structured around your goals with flexible financing through Cherry — so you can commit to your health without committing to a lump sum.",
   },
 ];
 
@@ -386,9 +386,8 @@ export default function HomePage() {
       <section className="bg-accent">
         <FadeUp className="mx-auto flex max-w-content flex-col items-center gap-6 px-6 py-12 text-center md:py-14 lg:flex-row lg:justify-between lg:px-8 lg:text-left">
           <p className="max-w-2xl font-body text-subhead-mobile font-medium text-white md:text-subhead">
-            Care plan financing available through Cherry and CareCredit —
-            $175/month with approved credit, or save with a single upfront
-            payment.
+            Care plan financing available through Cherry. Monthly payments
+            with approved credit — or save with a single upfront payment.
           </p>
           <div className="flex shrink-0 flex-wrap items-center justify-center gap-4">
             <Link

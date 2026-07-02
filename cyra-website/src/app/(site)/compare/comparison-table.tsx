@@ -83,9 +83,9 @@ const ROWS: Row[] = [
     ],
   },
   {
-    criterion: "Financing Available (Cherry / CareCredit)",
+    criterion: "Financing Available (Cherry)",
     cells: [
-      { verdict: "yes", note: "Cherry + CareCredit" },
+      { verdict: "yes", note: "Cherry financing" },
       { verdict: "no" },
       { verdict: "no" },
       { verdict: "no" },
